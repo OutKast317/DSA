@@ -6,7 +6,7 @@
 
 import java.util.*;
 
-public class Main {
+public class QueueMain {
     public static void main(String[] args) {
         Queue<String> queue = new LinkedList<String>();
         

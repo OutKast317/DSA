@@ -6,7 +6,7 @@ import java.util.Stack;
 public class StackMain {
   public static void main(String[] args) {
     Stack<String> stack = new Stack<String>();
-    
+    // Adding elements to the stack = push()
     stack.push("A");
     stack.push("B");
     stack.push("C");
@@ -19,7 +19,7 @@ public class StackMain {
     
     System.out.println("Peek: " + stack.peek()); // Peek at the top element (last added/pushed)
 
-    String a = stack.pop(); // Remove the top element (last added/pushed)
+    String a = stack.pop(); // Remove the top element (last added/pushed) = pop()
     System.out.println("Popped/Removed element: " + a);
 
     System.out.println("Stack after pop: " + stack);

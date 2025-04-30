@@ -1,6 +1,8 @@
-import java.util.*;
+import java.util.Collections;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
-public class PriorityQueue {
+public class PriorityQueueMain {
     public static void main(String[] args) {
       Queue<Double> queue = new PriorityQueue<>();
       

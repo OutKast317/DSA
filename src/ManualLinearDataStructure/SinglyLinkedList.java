@@ -24,12 +24,14 @@ class LinkedListClass{
         return (first == null);
     }
 
-    //add key to the first 
+    /*
+    //force add key to the first, it will break the logic of sorted list (insertKey() method) 
     public void insertFirst(long data){
         Link newLink = new Link(data);
         newLink.next = first;
         first = newLink;
     }
+     */
 
     //insert function
     public void insertKey(long key){
@@ -50,14 +52,13 @@ class LinkedListClass{
         newLink.next = currentLink;
     }
 
-    public Link removeKey(){
+    public Link removeFirstKey(){
         Link tempLink = first;
         first = first.next;
         return tempLink;
     }
     
     public void displayList(){
-        System.out.println("List: ");
         Link currentLink = first;
         while (currentLink != null){
             currentLink.display();
@@ -71,11 +72,24 @@ public class SinglyLinkedList {
         LinkedListClass linkedList = new LinkedListClass();
         //inserting / adding data
         linkedList.insertKey(10);
+        linkedList.insertKey(40);
         linkedList.insertKey(20);
         linkedList.insertKey(30);
-        linkedList.insertKey(40);
         linkedList.insertKey(50);
+        System.out.println("Original List ");
+        linkedList.displayList();
 
+        //will sort the list in ascending order
+
+        /* 
+        linkedList.insertFirst(11); // will add data to the head (force)
+        
+        shouldn't use this as this will mess with the sorted list.
+        */
+        linkedList.removeFirstKey();
+
+        
+        System.out.println("After removing the first key: ");
         linkedList.displayList();
 
 

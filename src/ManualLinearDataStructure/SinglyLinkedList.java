@@ -9,7 +9,7 @@ class Link{
     }
 
     public void display(){
-        System.out.println(data + " ");
+        System.out.print(data + " ");
     }
 }
 
@@ -31,10 +31,11 @@ class LinkedListClass{
         newLink.next = first;
         first = newLink;
     }
+    should not use this method if you want sorted list
      */
 
     //insert function
-    public void insertKey(long key){
+    public void sortedInsertkey(long key){
         Link newLink = new Link(key);
         Link previousLink = null; //start at head
         Link currentLink = first; //start at head
@@ -57,6 +58,26 @@ class LinkedListClass{
         first = first.next;
         return tempLink;
     }
+
+    public boolean removeByKey(long key){
+        Link current, previous;
+        current = first;
+        previous = null;
+
+        while (current != null && current.data == key){
+            previous = current;
+            current = current.next;
+        }
+
+        if (current == null) return false;
+
+        if (previous == null) {
+            first = current.next;
+        } else {
+            previous.next = current.next;
+        }
+        return true;
+    }
     
     public void displayList(){
         Link currentLink = first;
@@ -70,12 +91,14 @@ class LinkedListClass{
 public class SinglyLinkedList {
     public static void main(String[] args) {
         LinkedListClass linkedList = new LinkedListClass();
+        //Test cases (insert, delete, search)
+
         //inserting / adding data
-        linkedList.insertKey(10);
-        linkedList.insertKey(40);
-        linkedList.insertKey(20);
-        linkedList.insertKey(30);
-        linkedList.insertKey(50);
+        linkedList.sortedInsertkey(10);
+        linkedList.sortedInsertkey(40);
+        linkedList.sortedInsertkey(20);
+        linkedList.sortedInsertkey(30);
+        linkedList.sortedInsertkey(50);
         System.out.println("Original List ");
         linkedList.displayList();
 
@@ -89,7 +112,7 @@ public class SinglyLinkedList {
         linkedList.removeFirstKey();
 
         
-        System.out.println("After removing the first key: ");
+        System.out.println("\nAfter removing the first key: ");
         linkedList.displayList();
 
 

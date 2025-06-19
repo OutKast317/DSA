@@ -22,6 +22,9 @@ System.out.println("After adding to the beginning: " + list);
 list.addLast("P");
 System.out.println("After adding to the end: " + list);
 
+list.add(4, "u");
+System.out.println("Adding an item into the middle: " + list);
+
 //accessing an index
 System.out.println("Getting an item from a specific index: " + list.get(0));
 

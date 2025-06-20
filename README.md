@@ -1,18 +1,71 @@
-## Getting Started
+# 📚 Data Structures in Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+![Java](https://img.shields.io/badge/language-Java-orange)
+![Status](https://img.shields.io/badge/status-learning-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 📚 Table of Contents
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- [Project Overview](#project-overview)
+- [Who Is This For?](#who-is-this-for)
+- [Structure](#structure)
+- [Folder Breakdown](#folder-breakdown)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# 📚 Data Structures in Java
+
+This repository contains implementations of various **Linear** and **Non-linear Data Structures** in Java, organized for clarity and progressive learning.
+
+---
+
+### ✅ Linear Data Structures
+- Arrays
+- Linked Lists (Singly, Doubly)
+- Stacks
+- Queues (Simple, Circular, Priority)
+
+### 🌲 Non-Linear Data Structures
+- Trees (Binary Trees, BSTs)
+- Graphs (Adjacency List, Matrix)
+- Heaps
+- Hash Tables
+
+---
+
+## 👨‍💻 Who Is This For?
+
+- 🎓 **Computer Science students** who want to grasp core concepts.
+- 👩‍💻 **Entry-level developers** preparing for coding interviews.
+- 📖 Anyone who wants to understand both the abstract and low-level workings of data structures.
+
+## 🔖 Structure
+
+Each data structure is categorized by two main types:
+
+### 1. Using Built-in Java Functions
+- Focused on leveraging Java’s standard library (`java.util`) for quick and effective development.
+- Great for understanding how Java Collections work (e.g., `ArrayList`, `LinkedList`, `Stack`, `Queue`, `HashMap`, etc.)
+
+### 2. Manual Implementation (From Scratch)
+- Designed for students and entry-level developers to **build deep understanding** of how data structures work internally.
+- Implemented using **custom Node classes**, pointer manipulation, and memory structure awareness.
+- Similar to how data structures are implemented in C/C++.
+
+---
+
+## 📂 Folder Breakdown
+
+- Linear Data Structure 
+├── BuiltIn Functions
+- Manual Linear Data Structure
+├── Manual Implementations
+- Non-Linear Data Structure
+
+- Manual Non-Linear Data Structure
+

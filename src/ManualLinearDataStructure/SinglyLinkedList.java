@@ -1,4 +1,3 @@
-package ManualLinearDataStructure;
 
 class Link{
     public long data;

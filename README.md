@@ -2,19 +2,15 @@
 
 ![Java](https://img.shields.io/badge/language-Java-orange)
 ![Status](https://img.shields.io/badge/status-learning-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
 ---
 
 ## 📚 Table of Contents
 
-- [Project Overview](#project-overview)
+- [Project Overview](#data-structures-in-java)
 - [Who Is This For?](#who-is-this-for)
 - [Structure](#structure)
 - [Folder Breakdown](#folder-breakdown)
-
----
 
 
 

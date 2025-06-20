@@ -38,8 +38,8 @@ class LinkedListClass{
         }
         return false;
     }
-    
 
+    /*
     public int getSize(){
         int count = 0;
         Link currentLink = first;
@@ -48,6 +48,13 @@ class LinkedListClass{
             currentLink = currentLink.next;
         }
         return count;
+    }
+     */
+
+    private int size = 0;
+
+    public int getSize(){
+        return size;
     }
 
     /*
@@ -83,13 +90,17 @@ class LinkedListClass{
             previousLink.next = newLink;
         }
         newLink.next = currentLink;
+
+        size++;
     }
 
     public Link removeFirstKey(){
         if (first == null) return null;
         Link tempLink = first;
         first = first.next;
+        size--;
         return tempLink;
+
     }
 
     public boolean removeByKey(long key){
@@ -112,6 +123,7 @@ class LinkedListClass{
         } else {
             previous.next = current.next;
         }
+        size--;
         return true;
     }
     
@@ -121,6 +133,11 @@ class LinkedListClass{
             currentLink.display();
             currentLink = currentLink.next;
         } 
+    }
+
+    public void clear(){
+        first = null;
+        size = 0; //reset the size
     }
 }
 
@@ -160,6 +177,9 @@ public class SinglyLinkedList {
         linkedList.removeByKey(40);
         System.out.println("\nAfter removing by key: ");
         linkedList.displayList();
+
+        linkedList.clear();
+        System.out.println("\nSize of the list: " + linkedList.getSize());
 
  
     }    

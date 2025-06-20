@@ -128,6 +128,11 @@ class LinkedListClass{
     }
     
     public void displayList(){
+        if (first == null){
+            System.out.println("Empty List!");
+            return;
+        }
+
         Link currentLink = first;
         while (currentLink != null){
             currentLink.display();
@@ -153,7 +158,7 @@ public class SinglyLinkedList {
         linkedList.sortedInsertKey(30);
         linkedList.sortedInsertKey(50);
         linkedList.sortedInsertKey(20);//not able to enter repeated key
-        System.out.println("Original List ");
+        System.out.print("Original List: ");
         linkedList.displayList();
         int sizeOfList = linkedList.getSize();
         System.out.println("\nSize of the list: " + sizeOfList);
@@ -178,6 +183,7 @@ public class SinglyLinkedList {
         System.out.println("\nAfter removing by key: ");
         linkedList.displayList();
 
+        System.out.println("\n---After clearing the list---");
         linkedList.clear();
         System.out.println("\nSize of the list: " + linkedList.getSize());
 

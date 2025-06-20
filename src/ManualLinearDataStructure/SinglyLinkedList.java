@@ -1,6 +1,6 @@
-package ManualLinearDataStructure;
+package manualLineardatastructure;
 
-
+//Link class to represent nodes
 class Link{
     public long data;
     public Link next;
@@ -38,6 +38,17 @@ class LinkedListClass{
         }
         return false;
     }
+    
+
+    public int getSize(){
+        int count = 0;
+        Link currentLink = first;
+        while (currentLink != null){
+            count++;
+            currentLink = currentLink.next;
+        }
+        return count;
+    }
 
     /*
     //force add key to the first, it will break the logic of sorted list (insertKey() method) 
@@ -51,6 +62,12 @@ class LinkedListClass{
 
     //insert function
     public void sortedInsertKey(long key){
+        
+        if (contains(key)){
+            System.out.println(key + " already exists. Please do not re-enter the same key.");
+            return;
+        }
+
         Link newLink = new Link(key);
         Link previousLink = null; //start at head
         Link currentLink = first; //start at head
@@ -103,8 +120,7 @@ class LinkedListClass{
         while (currentLink != null){
             currentLink.display();
             currentLink = currentLink.next;
-        }
-        System.out.println("Empty list!");
+        } 
     }
 }
 
@@ -119,8 +135,14 @@ public class SinglyLinkedList {
         linkedList.sortedInsertKey(20);
         linkedList.sortedInsertKey(30);
         linkedList.sortedInsertKey(50);
+        linkedList.sortedInsertKey(20);//not able to enter repeated key
         System.out.println("Original List ");
         linkedList.displayList();
+        int sizeOfList = linkedList.getSize();
+        System.out.println("\nSize of the list: " + sizeOfList);
+        System.out.println("\nIs the list empty?: " + linkedList.isEmpty()); // check if the list is empty
+
+        System.out.println("Does the list contain 20?: " + linkedList.contains(20));//check if the key (20) exists
 
         //will sort the list in ascending order
 
@@ -135,7 +157,7 @@ public class SinglyLinkedList {
         linkedList.displayList();
 
         //removing the desired key
-        linkedList.removeByKey(50);
+        linkedList.removeByKey(40);
         System.out.println("\nAfter removing by key: ");
         linkedList.displayList();
 

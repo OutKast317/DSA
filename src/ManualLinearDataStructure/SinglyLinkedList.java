@@ -1,5 +1,6 @@
 package ManualLinearDataStructure;
 
+
 class Link{
     public long data;
     public Link next;
@@ -13,6 +14,7 @@ class Link{
     }
 }
 
+
 class LinkedListClass{
     private Link first;
     
@@ -22,6 +24,19 @@ class LinkedListClass{
 
     public boolean isEmpty(){
         return (first == null);
+    }
+
+    //search/check if a key exists
+    public boolean contains(long key){
+        Link currentLink = first;
+        while (currentLink != null){
+            if (currentLink.data == key){
+                return true;
+                
+            }
+            currentLink = currentLink.next;
+        }
+        return false;
     }
 
     /*
@@ -35,7 +50,7 @@ class LinkedListClass{
      */
 
     //insert function
-    public void sortedInsertkey(long key){
+    public void sortedInsertKey(long key){
         Link newLink = new Link(key);
         Link previousLink = null; //start at head
         Link currentLink = first; //start at head
@@ -54,6 +69,7 @@ class LinkedListClass{
     }
 
     public Link removeFirstKey(){
+        if (first == null) return null;
         Link tempLink = first;
         first = first.next;
         return tempLink;
@@ -88,6 +104,7 @@ class LinkedListClass{
             currentLink.display();
             currentLink = currentLink.next;
         }
+        System.out.println("Empty list!");
     }
 }
 
@@ -97,11 +114,11 @@ public class SinglyLinkedList {
         //Test cases (insert, delete, search)
 
         //inserting / adding data
-        linkedList.sortedInsertkey(10);
-        linkedList.sortedInsertkey(40);
-        linkedList.sortedInsertkey(20);
-        linkedList.sortedInsertkey(30);
-        linkedList.sortedInsertkey(50);
+        linkedList.sortedInsertKey(10);
+        linkedList.sortedInsertKey(40);
+        linkedList.sortedInsertKey(20);
+        linkedList.sortedInsertKey(30);
+        linkedList.sortedInsertKey(50);
         System.out.println("Original List ");
         linkedList.displayList();
 
@@ -122,6 +139,6 @@ public class SinglyLinkedList {
         System.out.println("\nAfter removing by key: ");
         linkedList.displayList();
 
-
+ 
     }    
 }

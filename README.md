@@ -7,10 +7,10 @@
 
 ## 📚 Table of Contents
 
-- [Project Overview](#data-structures-in-java)
-- [Who Is This For?](#who-is-this-for)
-- [Structure](#structure)
-- [Folder Breakdown](#folder-breakdown)
+- [Project Overview]
+- [Who Is This For?]
+- [Structure]
+- [Folder Breakdown]
 
 
 

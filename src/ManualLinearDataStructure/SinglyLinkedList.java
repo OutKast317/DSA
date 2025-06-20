@@ -1,3 +1,4 @@
+package ManualLinearDataStructure;
 
 class Link{
     public long data;
@@ -60,16 +61,19 @@ class LinkedListClass{
 
     public boolean removeByKey(long key){
         Link current, previous;
-        current = first;
-        previous = null;
+        current = first; //to scan through the list
+        previous = null; //track the node before current
 
-        while (current != null && current.data == key){
+        //traversing until we find the node with matching key
+        while (current != null && current.data != key){
             previous = current;
             current = current.next;
         }
 
+        //check if key found
         if (current == null) return false;
 
+        //key removal handling (remove the head)
         if (previous == null) {
             first = current.next;
         } else {
@@ -108,10 +112,14 @@ public class SinglyLinkedList {
         
         shouldn't use this as this will mess with the sorted list.
         */
+        //removing head from node
         linkedList.removeFirstKey();
-
-        
         System.out.println("\nAfter removing the first key: ");
+        linkedList.displayList();
+
+        //removing the desired key
+        linkedList.removeByKey(50);
+        System.out.println("\nAfter removing by key: ");
         linkedList.displayList();
 
 

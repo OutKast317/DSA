@@ -144,12 +144,32 @@ class LinkedListClass{
         first = null;
         size = 0; //reset the size
     }
+
+    public void reverseList() {
+        Link previous = null;
+        Link current = first;
+
+        while (current != null) {
+            Link next = current.next; // store next node
+            current.next = previous; // reverse the link
+            previous = current; // move previous to current
+            current = next; // move to next node
+        }
+        first = previous; // update head to new first node
+    }
 }
 
 public class SinglyLinkedList {
     public static void main(String[] args) {
         LinkedListClass linkedList = new LinkedListClass();
-        //Test cases (insert, delete, search)
+        //Test cases
+        //We will perform basic array operations: insertion, deletion, searching, traversal, and sorting
+        /*Complexity of each operation:
+        Insertion : O(1) -> constant
+        Deletion : O(n)
+        Traversal : O(n)
+        Searching : O(n)
+        */
 
         //inserting / adding data
         linkedList.sortedInsertKey(10);
@@ -158,7 +178,12 @@ public class SinglyLinkedList {
         linkedList.sortedInsertKey(30);
         linkedList.sortedInsertKey(50);
         linkedList.sortedInsertKey(20);//not able to enter repeated key
+        //displaying original list
         System.out.print("Original List: ");
+        linkedList.displayList();
+        //reversing the list
+        linkedList.reverseList();
+        System.out.print("\nReversed List: ");
         linkedList.displayList();
         int sizeOfList = linkedList.getSize();
         System.out.println("\nSize of the list: " + sizeOfList);

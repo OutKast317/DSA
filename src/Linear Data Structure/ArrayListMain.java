@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class ArrayListMain {
     public static void main(String[] args) {
-      ArrayList<Double> list = new ArrayList<Double>();
+      ArrayList<Double> list = new ArrayList<>();
       
       list.add(6.3);
       list.add(5.5);
@@ -40,7 +40,7 @@ public class ArrayListMain {
       
       //removing an item
       list.remove(2);//removing by defining an index 
-      list.remove("F");//removing by defining an item
+      list.remove(5.5);//removing by defining an item
       System.out.println("After removing: " + list);
       
   }

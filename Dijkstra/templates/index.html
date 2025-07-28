@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dijkstra Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='visualizer.js') }}" defer></script>
+</head>
+<body>
+    <h2>Dijkstra's Algorithm Visualizer</h2>
+    <div id="grid"></div>
+    <button onclick="startDijkstra()">Run Dijkstra</button>
+    <button onclick="clearGrid()">Clear Grid</button>
+
+</body>
+</html>

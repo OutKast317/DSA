@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(20, 25px);
+    gap: 1px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.path {
+    background-color: yellow !important;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.cell.start { background-color: green; }
+.cell.end { background-color: red; }
+.cell.wall { background-color: black; }
+.cell.visited { background-color: lightblue; }
+.cell.path { background-color: yellow; }

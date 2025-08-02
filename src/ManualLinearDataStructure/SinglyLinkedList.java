@@ -1,18 +1,4 @@
-package manualLineardatastructure;
-
-//Link class to represent nodes
-class Link{
-    public long data;
-    public Link next;
-
-    public Link(long data){
-        this.data = data;
-    }
-
-    public void display(){
-        System.out.print(data + " ");
-    }
-}
+package manuallineardatastructure;
 
 
 class LinkedListClass{
